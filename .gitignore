@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+artifacts/
+data/raw/
+*.pt
+*.onnx
+*.ckpt
+.streamlit/secrets.toml
+.pytest_cache/
+.ruff_cache/
+runs/

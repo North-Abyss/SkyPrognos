@@ -1,0 +1,11 @@
+torch
+xgboost
+scikit-learn
+onnxruntime
+streamlit
+pandas
+numpy
+
+[dev]
+pytest
+ruff
