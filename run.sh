@@ -22,7 +22,4 @@ echo "⏳ Loading Libraries (PyTorch, XGBoost)..."
 mkdir -p runs
 export PYTHONUNBUFFERED=1
 
-# Note: train.py will be implemented in Phase 2/3
-echo "Placeholder: python3 -m prognos.train --dataset FD001 --epochs 50 --max-ram 6.0"
-# python3 -m prognos.train --dataset FD001 --epochs 50 --max-ram 6.0 2>&1 | tee runs/training_log.txt
-echo "✅ Training script executed successfully (Mock)."
+python3 -m prognos.train --dataset FD001 --epochs 50 --max-ram 6.0 2>&1 | tee runs/training_log.txt

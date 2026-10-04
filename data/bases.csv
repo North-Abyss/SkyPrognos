@@ -1,0 +1,4 @@
+base_id,name,lat,lon,crew_capacity
+B001,HQ Base Alpha,35.123,-115.345,10
+B002,Forward Base Bravo,40.712,-74.006,2
+B003,Reserve Base Charlie,34.052,-118.243,5

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  base_hq:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - NODE_TYPE=base
+    volumes:
+      - ./data:/app/data
+      - ./runs:/app/runs
+
+  edge_ac101:
+    build: .
+    environment:
+      - NODE_TYPE=edge
+      - AIRCRAFT_ID=AC-101
+    command: ["python", "-c", "from prognos.edge import EdgeNode; node = EdgeNode('AC-101'); print('Edge node running.'); import time; time.sleep(86400)"]
+    volumes:
+      - ./data:/app/data

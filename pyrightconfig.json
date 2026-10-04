@@ -1,5 +1,5 @@
 {
-    "venvPath": ".",
+    "venvPath": "/mnt/sda5/Projects/QT",
     "venv": ".venv",
     "extraPaths": [
         "src",
