@@ -2,10 +2,6 @@ import os
 
 import pandas as pd
 import streamlit as st
-from theme import apply_theme
-
-st.set_page_config(page_title="Maintenance Schedule", layout="wide")
-apply_theme()
 
 st.title("Maintenance Schedule")
 st.write("Automatically triggered maintenance tasks based on RUL predictions.")
@@ -20,12 +16,12 @@ tasks = pd.DataFrame(
     }
 )
 
-st.dataframe(tasks, use_container_width=True)
+st.dataframe(tasks, width="stretch", alt="Scheduled maintenance tasks table")
 
 st.subheader("Inventory Check")
 try:
     if os.path.exists("data/parts.csv"):
         parts = pd.read_csv("data/parts.csv")
-        st.dataframe(parts)
+        st.dataframe(parts, width="stretch", alt="Parts inventory table")
 except (pd.errors.EmptyDataError, FileNotFoundError):
     st.error("Could not load parts data.")

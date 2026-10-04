@@ -1,8 +1,4 @@
 import streamlit as st
-from theme import apply_theme
-
-st.set_page_config(page_title="Edge Sync", layout="wide")
-apply_theme()
 
 st.title("Edge Synchronization")
 st.write("Simulating intermittent connectivity from aircraft edge nodes to HQ.")

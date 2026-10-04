@@ -1,9 +1,5 @@
 import pandas as pd
 import streamlit as st
-from theme import apply_theme
-
-st.set_page_config(page_title="Mission Planner", layout="wide")
-apply_theme()
 
 st.title("Mission Planner")
 st.write("Assign aircraft to missions based on their predicted health.")

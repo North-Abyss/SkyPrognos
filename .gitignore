@@ -33,3 +33,17 @@ tmp/
 temp/
 scratch/
 *.log
+tmp_*.md
+
+# Streamlit agent skills (symlinks, per Streamlit recommendation)
+.agents/skills/developing-with-streamlit
+
+# Packaging and Builds
+*.egg-info/
+dist/
+build/
+
+# PPT Scripts and Templates
+build_ppt.py
+inspect_ppt.py
+template.pptx

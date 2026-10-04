@@ -1,6 +1,7 @@
 """Custom Streamlit Theme and UI Utilities."""
 import streamlit as st
 
+
 def apply_theme():
     """Apply premium aviation command center theme."""
     st.markdown("""
@@ -114,10 +115,10 @@ def apply_theme():
             100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
         }
         
-        /* Sidebar styling */
-        [data-testid="stSidebar"] {
-            background-color: rgba(5, 13, 26, 0.95) !important;
-            border-right: 1px solid rgba(0, 255, 204, 0.2);
+        /* Top navigation dock styling */
+        [data-testid="stNavigation"] {
+            background: rgba(5, 13, 26, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 255, 204, 0.15);
         }
         
         /* Dataframes */
@@ -129,9 +130,7 @@ def apply_theme():
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* Hide streamlit branding but keep sidebar toggle */
+        /* Hide streamlit footer branding */
         footer {visibility: hidden;}
-        header {background: transparent;}
-        [data-testid="stToolbar"] {visibility: hidden;}
         </style>
     """, unsafe_allow_html=True)

@@ -3,10 +3,6 @@ import os
 
 import pandas as pd
 import streamlit as st
-from theme import apply_theme
-
-st.set_page_config(page_title="Training Runs", layout="wide")
-apply_theme()
 
 st.title("ML Training Runs")
 st.write("History of model training runs and their footprints.")
@@ -30,6 +26,6 @@ if os.path.exists("runs"):
                 )
 
 if runs:
-    st.dataframe(pd.DataFrame(runs), use_container_width=True)
+    st.dataframe(pd.DataFrame(runs), width="stretch", alt="ML training run history table")
 else:
     st.info("No training runs found in `runs/`.")

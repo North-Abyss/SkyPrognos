@@ -1,9 +1,5 @@
 import pandas as pd
 import streamlit as st
-from theme import apply_theme
-
-st.set_page_config(page_title="Fleet Overview", layout="wide")
-apply_theme()
 
 st.title("Fleet Overview")
 st.write("Ranking all aircraft by Remaining Useful Life (RUL) and Health Score.")
@@ -18,7 +14,7 @@ fleet_data = pd.DataFrame(
     }
 )
 
-st.dataframe(fleet_data, use_container_width=True)
+st.dataframe(fleet_data, width="stretch", alt="Fleet aircraft health ranking table")
 
 st.subheader("Base Map")
-st.map(pd.DataFrame({"lat": [35.123, 40.712, 34.052], "lon": [-115.345, -74.006, -118.243]}))
+st.map(pd.DataFrame({"lat": [35.123, 40.712, 34.052], "lon": [-115.345, -74.006, -118.243]}), alt="Map of aircraft base locations")
