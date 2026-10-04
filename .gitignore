@@ -1,14 +1,35 @@
+# Environments
 .env
-__pycache__/
-*.pyc
 .venv/
 venv/
-artifacts/
-data/raw/
-*.pt
-*.onnx
-*.ckpt
-.streamlit/secrets.toml
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+
+# Machine Learning & Data
+data/raw/
+artifacts/
 runs/
+*.pt
+*.pth
+*.onnx
+*.ckpt
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDEs, System & Temporary Files
+.vscode/
+.idea/
+.DS_Store
+.local/
+tmp/
+temp/
+scratch/
+*.log

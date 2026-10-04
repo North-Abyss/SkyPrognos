@@ -13,6 +13,7 @@ dependencies = [
     "xgboost",
     "scikit-learn",
     "onnxruntime",
+    "onnxscript",
     "streamlit",
     "pandas",
     "numpy",
@@ -33,3 +34,9 @@ ignore = ["EXE002"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.pyright]
+venvPath = "/mnt/sda5/Projects/QT"
+venv = ".venv"
+extraPaths = ["src", "app"]
+exclude = ["ml_notebooks"]

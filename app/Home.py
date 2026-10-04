@@ -9,16 +9,15 @@ st.set_page_config(
 
 apply_theme()
 
-st.title("SkyPrognos: Fleet Health Platform")
-st.markdown("### Aviation Predictive Maintenance Command Center")
+pages = [
+    st.Page("app_pages/home.py", title="Home", icon=":material/home:"),
+    st.Page("app_pages/1_Fleet.py", title="Fleet Overview", icon=":material/flight:"),
+    st.Page("app_pages/2_Aircraft.py", title="Aircraft Telemetry", icon=":material/speed:"),
+    st.Page("app_pages/3_Mission_Planner.py", title="Mission Planner", icon=":material/map:"),
+    st.Page("app_pages/4_Maintenance.py", title="Maintenance", icon=":material/build:"),
+    st.Page("app_pages/5_Edge_Sync.py", title="Edge Sync", icon=":material/sync:"),
+    st.Page("app_pages/6_Runs.py", title="Training Runs", icon=":material/analytics:"),
+]
 
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.markdown('<div class="metric-card"><h4>Fleet Availability</h4><h2>92%</h2></div>', unsafe_allow_html=True)
-with col2:
-    st.markdown('<div class="metric-card warning"><h4>Watch Status</h4><h2>3</h2></div>', unsafe_allow_html=True)
-with col3:
-    st.markdown('<div class="metric-card critical"><h4>Critical AOG Risk</h4><h2>1</h2></div>', unsafe_allow_html=True)
-
-st.write("---")
-st.write("Navigate using the sidebar to view Fleet Status, Aircraft Telemetry, and Maintenance Scheduling.")
+page = st.navigation(pages, position="top")
+page.run()

@@ -1,6 +1,8 @@
 """Evaluation metrics for RUL prediction."""
+
 import numpy as np
 from sklearn.metrics import root_mean_squared_error
+
 
 def nasa_score(y_true, y_pred):
     """
@@ -16,8 +18,9 @@ def nasa_score(y_true, y_pred):
             score += np.exp(error / 10.0) - 1
     return score
 
+
 def evaluate_predictions(y_true, y_pred):
     """Returns RMSE and NASA score."""
     rmse = root_mean_squared_error(y_true, y_pred)
     score = nasa_score(y_true, y_pred)
-    return {'rmse': rmse, 'nasa_score': score}
+    return {"rmse": rmse, "nasa_score": score}

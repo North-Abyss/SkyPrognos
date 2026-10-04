@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 from theme import apply_theme
 
 st.set_page_config(page_title="Edge Sync", layout="wide")

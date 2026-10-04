@@ -1,6 +1,6 @@
-import streamlit as st
-import pandas as pd
 import numpy as np
+import pandas as pd
+import streamlit as st
 from theme import apply_theme
 
 st.set_page_config(page_title="Aircraft Telemetry", layout="wide")
@@ -16,7 +16,7 @@ cycle = st.slider("Cycle Replay", min_value=1, max_value=200, value=150)
 # Dummy telemetry plot
 chart_data = pd.DataFrame(
     np.random.randn(cycle, 3),
-    columns=['Sensor 1 (Vibration)', 'Sensor 2 (Temp)', 'Sensor 3 (Pressure)']
+    columns=["Sensor 1 (Vibration)", "Sensor 2 (Temp)", "Sensor 3 (Pressure)"],
 )
 st.line_chart(chart_data)
 
