@@ -2,6 +2,8 @@
 
 An aviation fleet-health platform that predicts engine Remaining Useful Life (RUL) from sensor telemetry, ranks the fleet by health, and schedules maintenance efficiently.
 
+🚀 **Live Demo:** [skyprognos.streamlit.app](https://skyprognos.streamlit.app/)
+
 ## Getting Started
 
 SkyPrognos uses a lean, CPU-inference-focused ML stack.
