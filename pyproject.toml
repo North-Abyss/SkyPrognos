@@ -17,6 +17,7 @@ dependencies = [
     "streamlit",
     "pandas",
     "numpy",
+    "Pillow",
 ]
 
 [project.optional-dependencies]
